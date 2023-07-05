@@ -235,7 +235,7 @@ CREATE TABLE Address (
     AD_Street1 VARCHAR2(30) NOT NULL,
     AD_Street2 VARCHAR2(30),
     AD_Street3 VARCHAR2(30),
-    AD_PostalCode VARCHAR2(5) NOT NULL,
+    AD_PostalCode VARCHAR2(10),
     AD_City VARCHAR2(20) NOT NULL,
     AD_District VARCHAR2(20) NOT NULL,
     AD_State VARCHAR2(20) NOT NULL,
