@@ -74,7 +74,7 @@ CREATE TABLE PersonalDetail (
     PD_BirthPlace VARCHAR(255),
     PD_PassportNum VARCHAR2(10),
     PD_Race VARCHAR2(10),
-    PD_Religion VARCHAR2(10),
+    PD_Religion VARCHAR2(20),
     PD_MaritalStatus VARCHAR2(10),
     PD_SpouseName VARCHAR2(50),
     PD_ChildrenNum INTEGER,
@@ -84,7 +84,7 @@ CREATE TABLE PersonalDetail (
 
 CREATE TABLE ProfessionalDetail (
     PR_ProfessionalID VARCHAR2(20) PRIMARY KEY,
-    PR_CompanyName VARCHAR2(30),
+    PR_CompanyName VARCHAR2(50),
     PR_Designation VARCHAR2(30),
     PR_CompanyAddress VARCHAR2(100),
     PR_CompanyEmail VARCHAR2(30),
@@ -187,7 +187,7 @@ CREATE TABLE Payment (
 
 CREATE TABLE Invoice (
     IN_InvoiceID VARCHAR2(20) PRIMARY KEY,
-    IN_CompanyAddress VARCHAR2(50),
+    IN_CompanyAddress VARCHAR2(150),
     IN_CompanyEmail VARCHAR2(50),
     IN_CustomerAddress VARCHAR2(50),
     IN_CustomerEmail VARCHAR2(50),
@@ -234,12 +234,12 @@ CREATE TABLE Salary (
 CREATE TABLE Reservation (
     R_ReservationID VARCHAR2(20) PRIMARY KEY,
     R_StartDate DATE,
-    R_StartTime VARCHAR2(20),
     R_EndDate DATE,
+    R_StartTime VARCHAR2(20),
     R_EndTime VARCHAR2(20),
     R_GuestNum INTEGER,
     R_Membership VARCHAR2(10),
-    R_Discount NUMBER(1,2),
+    R_Discount NUMBER(4,2),
     R_NetPrice NUMBER(8,2),
     R_Status VARCHAR2(20)
 );
@@ -247,10 +247,10 @@ CREATE TABLE Reservation (
 CREATE TABLE GolfCourse (
     GC_CourseID VARCHAR2(20) PRIMARY KEY,
     GC_Description VARCHAR2(50),
-    GC_AveragePar NUMBER(2,2),
-    GC_Rating NUMBER(2,2),
-    GC_SlopeRating NUMBER(2,2),
-    GC_Yardage NUMBER(2,2),
+    GC_AveragePar NUMBER(2),
+    GC_Rating NUMBER(2,1),
+    GC_SlopeRating NUMBER(4),
+    GC_Yardage NUMBER(6,2),
     GC_HoleCount INTEGER,
     GC_Architect VARCHAR2(50),
     GC_Amenities VARCHAR2(100),
@@ -321,7 +321,7 @@ CREATE TABLE DiningHospitality (
     D_Category VARCHAR2(20),
     D_PaxAmount INTEGER,
     D_SeatingType VARCHAR2(20),
-    D_SetMenu VARCHAR2(20),
+    D_SetMenu VARCHAR2(50),
     RS_ResortID VARCHAR2(20),
     CONSTRAINT FK_D_Resort FOREIGN KEY (RS_ResortID) REFERENCES ResortFacility (RS_ResortID) ON DELETE CASCADE
 );
