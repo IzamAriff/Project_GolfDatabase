@@ -155,17 +155,17 @@ CREATE TABLE Membership (
 SELECT * FROM MEMBERSHIP;
 DROP TABLE MEMBERSHIP;
 
+INSERT INTO MEMBERSHIP VALUES('M0001', '1 Year', TO_DATE('19/01/2022', 'DD/MM/YYYY'), TO_DATE('19/01/2023', 'DD/MM/YYYY'), TO_DATE('20/01/2023', 'DD/MM/YYYY'), 6360.00, '1 Year', 'Active', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0002');
+INSERT INTO MEMBERSHIP VALUES('M0002', '3 Year', TO_DATE('13/04/2021', 'DD/MM/YYYY'), TO_DATE('13/04/2024', 'DD/MM/YYYY'), TO_DATE('14/04/2024', 'DD/MM/YYYY'), 14310.00, '2 Year', 'Active', 'Reservation, Equipment, Golfevent', 'Inactive', 'P0004');
+INSERT INTO MEMBERSHIP VALUES('M0003', '2 Year', TO_DATE('20/03/2022', 'DD/MM/YYYY'), TO_DATE('20/03/2024', 'DD/MM/YYYY'), TO_DATE('21/03/2024', 'DD/MM/YYYY'), 10600.00, '0 Year', 'Inactive', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Active', 'P0006');
+INSERT INTO MEMBERSHIP VALUES('M0004', '3 Year', TO_DATE('28/06/2020', 'DD/MM/YYYY'), TO_DATE('28/06/2023', 'DD/MM/YYYY'), TO_DATE('29/06/2023', 'DD/MM/YYYY'), 14310.00, '1 Year', 'Inactive', 'Reservation, Equipment, GolfEvent', 'Active', 'P0008');
+INSERT INTO MEMBERSHIP VALUES('M0005', '1 Year', TO_DATE('30/05/2023', 'DD/MM/YYYY'), TO_DATE('30/05/2024', 'DD/MM/YYYY'), TO_DATE('31/05/2024', 'DD/MM/YYYY'), 6360.00, '1 Year', 'Active', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0020');
+INSERT INTO MEMBERSHIP VALUES('M0006', '1 Year', TO_DATE('25/09/2022', 'DD/MM/YYYY'), TO_DATE('25/09/2023', 'DD/MM/YYYY'), TO_DATE('26/09/2023', 'DD/MM/YYYY'), 6360.00, '0 Year', 'Inactive', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Active', 'P0021');
+INSERT INTO MEMBERSHIP VALUES('M0007', '3 Year', TO_DATE('17/12/2020', 'DD/MM/YYYY'), TO_DATE('17/12/2023', 'DD/MM/YYYY'), TO_DATE('18/12/2023', 'DD/MM/YYYY'), 14310.00, '2 Year', 'Active', 'Reservation, Equipment, Golfevent', 'Inactive', 'P0023');
+INSERT INTO MEMBERSHIP VALUES('M0008', '2 Year', TO_DATE('26/10/2022', 'DD/MM/YYYY'), TO_DATE('26/10/2024', 'DD/MM/YYYY'), TO_DATE('27/10/2024', 'DD/MM/YYYY'), 10600.00, '2 Year', 'Active', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0025');
+INSERT INTO MEMBERSHIP VALUES('M0009', '2 Year', TO_DATE('22/06/2023', 'DD/MM/YYYY'), TO_DATE('22/06/2025', 'DD/MM/YYYY'), TO_DATE('23/06/2026', 'DD/MM/YYYY'), 10600.00, '0 Year', 'Inactive', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Active', 'P0027');
+INSERT INTO MEMBERSHIP VALUES('M0010', '3 Year', TO_DATE('18/02/2022', 'DD/MM/YYYY'), TO_DATE('18/02/2025', 'DD/MM/YYYY'), TO_DATE('19/02/2025', 'DD/MM/YYYY'), 14310.00, '0 Year', 'Inactive', 'Reservation, Equipment, Golfevent', 'Active', 'P0029');
 
-INSERT INTO MEMBERSHIP VALUES('M0001', '1 Year', TO_DATE('19/01/2022', 'DD/MM/YYYY'), TO_DATE('19/01/2023', 'DD/MM/YYYY'), TO_DATE('20/01/2023', 'DD/MM/YYYY'), 'RM6,360.00', '1 Year', 'Active', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0002');
-INSERT INTO MEMBERSHIP VALUES('M0002', '3 Year', TO_DATE('13/04/2021', 'DD/MM/YYYY'), TO_DATE('13/04/2024', 'DD/MM/YYYY'), TO_DATE('14/04/2024', 'DD/MM/YYYY'), 'RM14,310.00', '2 Year', 'Active', 'Reservation, Equipment, Golfevent', 'Inactive', 'P0004');
-INSERT INTO MEMBERSHIP VALUES('M0003', '2 Year', TO_DATE('20/03/2022', 'DD/MM/YYYY'), TO_DATE('20/03/2024', 'DD/MM/YYYY'), TO_DATE('21/03/2024', 'DD/MM/YYYY'), 'RM10,600.00', '0 Year', 'Inactive', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Active', 'P0006');
-INSERT INTO MEMBERSHIP VALUES('M0004', '3 Year', TO_DATE('28/06/2020', 'DD/MM/YYYY'), TO_DATE('28/06/2023', 'DD/MM/YYYY'), TO_DATE('29/06/2023', 'DD/MM/YYYY'), 'RM14,310.00', '1 Year', 'Inactive', 'Reservation, Equipment, GolfEvent', 'Active', 'P0008');
-INSERT INTO MEMBERSHIP VALUES('M0005', '1 Year', TO_DATE('30/05/2023', 'DD/MM/YYYY'), TO_DATE('30/05/2024', 'DD/MM/YYYY'), TO_DATE('31/05/2024', 'DD/MM/YYYY'), 'RM6,360.00', '1 Year', 'Active', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0020');
-INSERT INTO MEMBERSHIP VALUES('M0006', '1 Year', TO_DATE('25/09/2022', 'DD/MM/YYYY'), TO_DATE('25/09/2023', 'DD/MM/YYYY'), TO_DATE('26/09/2023', 'DD/MM/YYYY'), 'RM6,360.00', '0 Year', 'Inactive', 'Either 1 of  Reservation, Equipment, GolfEvent', 'Active', 'P0021');
-INSERT INTO MEMBERSHIP VALUES('M0007', '3 Year', TO_DATE('17/12/2020', 'DD/MM/YYYY'), TO_DATE('17/12/2023', 'DD/MM/YYYY'), TO_DATE('18/12/2023', 'DD/MM/YYYY'), 'RM14,310.00', '2 Year', 'Active', 'Reservation, Equipment, Golfevent', 'Inactive', 'P0023');
-INSERT INTO MEMBERSHIP VALUES('M0008', '2 Year', TO_DATE('26/10/2022', 'DD/MM/YYYY'), TO_DATE('26/10/2024', 'DD/MM/YYYY'), TO_DATE('27/10/2024', 'DD/MM/YYYY'), 'RM10,600.00', '2 Year', 'Active', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Inactive', 'P0025');
-INSERT INTO MEMBERSHIP VALUES('M0009', '2 Year', TO_DATE('22/06/2023', 'DD/MM/YYYY'), TO_DATE('22/06/2025', 'DD/MM/YYYY'), TO_DATE('23/06/2026', 'DD/MM/YYYY'), 'RM10,600.00', '0 Year', 'Inactive', 'Either 2 of  Reservation, Equipment, GolfEvent', 'Active', 'P0027');
-INSERT INTO MEMBERSHIP VALUES('M0010', '3 Year', TO_DATE('18/02/2022', 'DD/MM/YYYY'), TO_DATE('18/02/2025', 'DD/MM/YYYY'), TO_DATE('19/02/2025', 'DD/MM/YYYY'), 'RM14,310.00', '0 Year', 'Inactive', 'Reservation, Equipment, Golfevent', 'Active', 'P0029');
 
 
 CREATE TABLE PersonalDetail (
