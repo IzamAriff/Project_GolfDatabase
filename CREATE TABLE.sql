@@ -169,8 +169,8 @@ INSERT INTO MEMBERSHIP VALUES('M0010', '3 Year', TO_DATE('18/02/2022', 'DD/MM/YY
 
 
 CREATE TABLE PersonalDetail (
-    PD_PersonalID INTEGER PRIMARY KEY,
-    PD_IdentificationNum INTEGER NOT NULL,
+    PD_PersonalID VARCHAR2(12) PRIMARY KEY,
+    PD_IdentificationNum INTEGER(20) NOT NULL,
     PD_BirthDate DATE NOT NULL,
     PD_BirthPlace VARCHAR(255) NOT NULL,
     PD_PassportNum VARCHAR2(10) NOT NULL,
@@ -215,7 +215,7 @@ CREATE TABLE ProfessionalDetail (
 );
 
 SELECT * FROM PROFESSIONALDETAIL;
-DROP TABLE PERSONALDETAIL;
+DROP TABLE PROFESSIONALDETAIL;
 
 INSERT INTO PROFESSIONALDETAIL VALUES ('PR001', 'Golf Course Experts', 'Golf Course Designer', '123 Jalan Golf, Kuala Lumpur', 'info@golfexperts.com', '60123456789', '603123463', 'Sports', 'Active', '1234567890', 'Valid', 'M0001');
 INSERT INTO PROFESSIONALDETAIL VALUES ('PR002', 'Green Maintenance', 'Landscape Specialist', '456 Jalan Putra, Penang', 'maintenance@green.com', '60109876543', '604368379', 'Landscaping', 'Active', '9876543216', 'Valid', 'M0002');
@@ -230,7 +230,7 @@ INSERT INTO PROFESSIONALDETAIL VALUES ('PR010', 'Travel Agency', 'Travel Consult
 
 
 CREATE TABLE Address (
-    AD_AddressID INTEGER PRIMARY KEY,
+    AD_AddressID VARCHAR2(10) PRIMARY KEY,
     AD_Unit VARCHAR2(10) NOT NULL,
     AD_Street1 VARCHAR2(30) NOT NULL,
     AD_Street2 VARCHAR2(30),
