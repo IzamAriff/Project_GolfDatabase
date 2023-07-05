@@ -109,7 +109,7 @@ INSERT INTO CUSTOMER VALUES ('C0010', 'Malaysian', 'O+', 'None', 'Tamil', '60123
 
 CREATE TABLE Golfer (
     G_GolferID VARCHAR2(20) PRIMARY KEY,
-    G_PreferredTeeTime TIME NOT NULL,
+    G_PreferredTeeTime VARCHAR(10) NOT NULL,
     G_Level VARCHAR2(20) NOT NULL,
     G_PhysicalFitness VARCHAR2(20) NOT NULL,
     G_Handicap INTEGER NOT NULL,
@@ -170,7 +170,7 @@ INSERT INTO MEMBERSHIP VALUES('M0010', '3 Year', TO_DATE('18/02/2022', 'DD/MM/YY
 
 CREATE TABLE PersonalDetail (
     PD_PersonalID INTEGER PRIMARY KEY,
-    PD_IdentificationNum INTEGER(12) NOT NULL,
+    PD_IdentificationNum INTEGER NOT NULL,
     PD_BirthDate DATE NOT NULL,
     PD_BirthPlace VARCHAR(255) NOT NULL,
     PD_PassportNum VARCHAR2(10) NOT NULL,
@@ -186,16 +186,16 @@ CREATE TABLE PersonalDetail (
 SELECT * FROM PERSONALDETAIL;
 DROP TABLE PERSONALDETAIL;
 
-INSERT INTO PERSONALDETAIL VALUES ('PD001', '920101-14-5678', TO_DATE('01/01/92', 'DD/MM/YY'), 'Kuala Lumpur', 'A12345678', 'Malay', 'Islam', 'Married', 'Nurul Aisyah', 2, 'M0001');
-INSERT INTO PERSONALDETAIL VALUES ('PD002', '880212-06-1234', TO_DATE('12/02/88', 'DD/MM/YY'), 'Penang', 'B98765432', 'Chinese', 'Buddhism', 'Single', 'None', 0, 'M0002');
-INSERT INTO PERSONALDETAIL VALUES ('PD003', '910503-08-9876', TO_DATE('03/05/91', 'DD/MM/YY'), 'Johor Bahru', 'C24681357', 'Indian', 'Hinduism', 'Married', 'Rajesh Kumar', 1, 'M0003');
-INSERT INTO PERSONALDETAIL VALUES ('PD004', '930714-10-2468', TO_DATE('14/07/93', 'DD/MM/YY'), 'Langkawi', 'D13579246', 'Malay', 'Islam', 'Single', 'None', 0, 'M0004');
-INSERT INTO PERSONALDETAIL VALUES ('PD005', '890825-05-1357', TO_DATE('25/08/89', 'DD/MM/YY'), 'Kuching', 'E98765431', 'Chinese', 'Buddhism', 'Married', 'Tan Wei Ling', 3, 'M0005');
-INSERT INTO PERSONALDETAIL VALUES ('PD006', '900306-12-4680', TO_DATE('06/03/90', 'DD/MM/YY'), 'Kota Kinabalu', 'F24681359', 'Indian', 'Sikhism', 'Single', 'None', 0, 'M0006');
-INSERT INTO PERSONALDETAIL VALUES ('PD007', '920717-08-5791', TO_DATE('17/07/92', 'DD/MM/YY'), 'Cameron Highlands', 'G98765430', 'Malay', 'Islam', 'Married', 'Muhammad Ali', 2, 'M0007');
-INSERT INTO PERSONALDETAIL VALUES ('PD008', '870528-09-3579', TO_DATE('28/05/87', 'DD/MM/YY'), 'Genting Highland', 'H13579248', 'Chinese', 'Christianity', 'Single', 'None', 0, 'M0008');
-INSERT INTO PERSONALDETAIL VALUES ('PD009', '910829-06-8024', TO_DATE('29/08/91', 'DD/MM/YY'), 'Port Dickson', 'I98765429', 'Malay', 'Islam', 'Married', 'Siti Aminah', 1, 'M0009');
-INSERT INTO PERSONALDETAIL VALUES ('PD010', '940610-07-9135', TO_DATE('10/06/94', 'DD/MM/YY'), 'Melaka', 'J24681358', 'Chinese', 'Buddhism', 'Single', 'None', 0, 'M0010');
+INSERT INTO PERSONALDETAIL VALUES ('PD001', '920101-14-5678', TO_DATE('01/01/1992', 'DD/MM/YYYY'), 'Kuala Lumpur', 'A12345678', 'Malay', 'Islam', 'Married', 'Nurul Aisyah', 2, 'M0001');
+INSERT INTO PERSONALDETAIL VALUES ('PD002', '880212-06-1234', TO_DATE('12/02/1988', 'DD/MM/YYYY'), 'Penang', 'B98765432', 'Chinese', 'Buddhism', 'Single', 'None', 0, 'M0002');
+INSERT INTO PERSONALDETAIL VALUES ('PD003', '910503-08-9876', TO_DATE('03/05/1991', 'DD/MM/YYYY'), 'Johor Bahru', 'C24681357', 'Indian', 'Hinduism', 'Married', 'Rajesh Kumar', 1, 'M0003');
+INSERT INTO PERSONALDETAIL VALUES ('PD004', '930714-10-2468', TO_DATE('14/07/1993', 'DD/MM/YYYY'), 'Langkawi', 'D13579246', 'Malay', 'Islam', 'Single', 'None', 0, 'M0004');
+INSERT INTO PERSONALDETAIL VALUES ('PD005', '890825-05-1357', TO_DATE('25/08/1989', 'DD/MM/YYYY'), 'Kuching', 'E98765431', 'Chinese', 'Buddhism', 'Married', 'Tan Wei Ling', 3, 'M0005');
+INSERT INTO PERSONALDETAIL VALUES ('PD006', '900306-12-4680', TO_DATE('06/03/1990', 'DD/MM/YYYY'), 'Kota Kinabalu', 'F24681359', 'Indian', 'Sikhism', 'Single', 'None', 0, 'M0006');
+INSERT INTO PERSONALDETAIL VALUES ('PD007', '920717-08-5791', TO_DATE('17/07/1992', 'DD/MM/YYYY'), 'Cameron Highlands', 'G98765430', 'Malay', 'Islam', 'Married', 'Muhammad Ali', 2, 'M0007');
+INSERT INTO PERSONALDETAIL VALUES ('PD008', '870528-09-3579', TO_DATE('28/05/1987', 'DD/MM/YYYY'), 'Genting Highland', 'H13579248', 'Chinese', 'Christianity', 'Single', 'None', 0, 'M0008');
+INSERT INTO PERSONALDETAIL VALUES ('PD009', '910829-06-8024', TO_DATE('29/08/1991', 'DD/MM/YYYY'), 'Port Dickson', 'I98765429', 'Malay', 'Islam', 'Married', 'Siti Aminah', 1, 'M0009');
+INSERT INTO PERSONALDETAIL VALUES ('PD010', '940610-07-9135', TO_DATE('10/06/1994', 'DD/MM/YYYY'), 'Melaka', 'J24681358', 'Chinese', 'Buddhism', 'Single', 'None', 0, 'M0010');
 
 
 CREATE TABLE ProfessionalDetail (
